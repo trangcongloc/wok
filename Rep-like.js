@@ -1,5 +1,6 @@
 // Tool auto like + reply
-document.querySelectorAll('[aria-label="Heart"]').forEach(heart=>heart.click())
+document.querySelectorAll('[aria-label="Heart"]').forEach(heart=>heart.click()) // Auto Like All Comments
+
 console.log("Liked")
 
 setTimeout(() => {
