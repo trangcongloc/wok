@@ -1,9 +1,13 @@
 // Tool auto like + reply
-document.querySelectorAll('[aria-label="Heart"]').forEach(heart=>heart.click()) // Auto Heart All Comments
-document.querySelectorAll('[aria-label="Like this comment along with 0 other people"]').forEach(like=>like.click()) // Auto Like All Comments
-console.log("Liked")
+let allHearts = document.querySelectorAll('[aria-label="Heart"]')
+allHearts.forEach(heart=>heart.click()) // Auto Heart All Comments
+let allLikes = document.querySelectorAll('[aria-label="Like this comment along with 0 other people"]')
+allLikes.forEach(like=>like.click()) // Auto Like All Comments
+console.clear();
+console.log(`${allHearts.length} Hearts - ${allLikes.length} Likes`)
 
 setTimeout(() => {
+    console.clear();
     console.log("Choosing reply...")
     let secondSg = document.querySelectorAll("#suggestion-1");
     secondSg.forEach(sgt => {
@@ -14,7 +18,8 @@ setTimeout(() => {
     });
 
     setTimeout(() => {
-        console.log("Reply added...")
+        console.clear();
+        console.log(`${secondSg.length} Replies added...`)
         let btnElement = document.querySelectorAll(".style-scope.ytcp-comment-button.style-blue-text.size-default");
         btnElement.forEach(btn => {
         btn.addEventListener('click', (event) => {
